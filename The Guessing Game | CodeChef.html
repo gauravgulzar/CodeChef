@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en" dir="ltr">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script>
+            (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+            c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+            c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+            _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+            (window,document,"script","4e7c8fce06a9ab05530008e5");
+        </script>
+
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+        <title>The Guessing Game | CodeChef</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM" />
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" media="all" href="http://www.codechef.com/sites/default/files/css/css_87ceb9dc17d373646673cc696c526bbb.css" />
+        <link rel="stylesheet" type="text/css" href="/sites/all/themes/abessive/acmkanpurproblem.css" />
+        <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery.min.js?9"></script>
+<script type="text/javascript" src="/misc/drupal.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/fbconnect/fbconnect.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/fivestar/js/fivestar.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/lightbox2/js/lightbox.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/nice_menus/nice_menus.js?9"></script>
+<script type="text/javascript" src="/misc/common.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/tableofcontents/jquery.scrollTo-min.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/tableofcontents/jquery.localscroll-min.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/tableofcontents/tableofcontents.js?9"></script>
+<script type="text/javascript" src="/sites/all/modules/codechef_recent_comments/codechef_recent_comments.js?9"></script>
+<script type="text/javascript" src="/misc/textarea.js?9"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","fbconnect":{"user_pictures":"allow","language_code":"en_US","app_id":"191217060453","debug":0,"connect_js":"document.location.protocol + '\/\/connect.facebook.net\/en_US\/all.js'","loginout_mode":"manual","invite_name":"CodeChef","fast_reg_mode":0,"fast_reg_autoname":0,"fbuid":null,"user":{"uid":"394602","fbuid":null}},"fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)sites\/default\/files","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"eeedec","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":true,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\u003e\u003ckbd\u003ex\u003c\/kbd\u003e\u003c\/a\u003e to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":500,"iframe_height":70,"iframe_border":1,"enable_video":0}});
+//--><!]]>
+</script>
+        <meta property="og:title" content="The Guessing Game" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.codechef.com/problems/A3" />
+        <meta property="og:image" content="http://www.codechef.com/misc/fb-chef.gif" />
+        <meta property="og:site_name" content="CodeChef" />
+        <meta property="fb:app_id" content="155442717838457" />
+
+		<script type="text/javascript">
+				</script>
+
+    </head>
+    <body  class="sidebar-right"><center>
+
+            <div id="header" class="wrapper">
+                <div class="inner-wrapper">
+                    <!-- Header -->
+                    <div id="logo-floater" class="cols-2">
+                        <a href="/" title=""><img src="/sites/all/themes/abessive/logo.png" alt="CodeChef is a non-commercial competitive programming community" id="logo" /><span></span></a>                    </div>
+                    <div class="cols-2">
+                        <div id="custom-login">
+                                <!--Hello <strong>Admin</strong>, Check your <strong><a href="">Account</a></strong> or <a href="/logout">Log Out</a>-->
+                            <div id="user-bar">
+                <div class="login-user"> 
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+        <span>
+            Hello gauravgulzar! <br />
+            <a href="/users/gauravgulzar" title="Edit Your Account">Account</a>
+            or <a href="/logout">Log Out</a>
+        </span></td>
+                        </tr>
+                    </table>
+                </div></div>
+        <div id="facebook-login">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>Login or<br>Signup with</td>
+                    <td><span class="facebook-button"><div class="fb-login-button"  size="medium" onlogin="facebook_onlogin_ready();" background="dark" v="2" scope="publish_stream, offline_access">Connect</div></span></td>
+                </tr>
+            </table>
+        </div>    
+        <div class="question-note">
+            <a href="#">
+                <span class="icon-question">Note</span>
+                <div class="tooltip">
+                    <ul>
+                        <li>Publicize your achievements on your Facebook Wall.</li>
+                        <li>Challenge your friends or ask them for help.</li>
+                    </ul>
+                </div>
+            </a>
+        </div>                        </div>
+
+                        <div id="block-nice_menus-1" class="block block-nice_menus block-header">
+  <div class="content">
+    <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>    <ul class="nice-menu nice-menu-down" id="nice-menu-1"><li id="menu-302" class="menuparent menu-path-problems-easy"><a href="/problems/easy" title="">PRACTICE</a><ul><li id="menu-303" class="menu-path-problems-easy"><a href="/problems/easy" title="">Easy</a></li>
+<li id="menu-304" class="menu-path-problems-medium"><a href="/problems/medium" title="">Medium</a></li>
+<li id="menu-305" class="menu-path-problems-hard"><a href="/problems/hard" title="">Hard</a></li>
+<li id="menu-1819" class="menu-path-problems-challenge"><a href="/problems/challenge" title="">Challenge</a></li>
+<li id="menu-1376" class="menu-path-problems-extcontest"><a href="/problems/extcontest" title="">Peer</a></li>
+<li id="menu-2602" class="menu-path-problems-school"><a href="/problems/school" title="">School</a></li>
+</ul>
+</li>
+<li id="menu-309" class="menuparent menu-path-contests"><a href="/contests" title="">COMPETE</a><ul><li id="menu-2203" class="menu-path-www.codechef.com-contests"><a href="http://www.codechef.com/contests" title="">All Contests</a></li>
+<li id="menu-4729" class="menu-path-www.codechef.com-COOK42"><a href="http://www.codechef.com/COOK42" title="">January Cook-Off 2014</a></li>
+<li id="menu-4726" class="menu-path-www.codechef.com-JAN14"><a href="http://www.codechef.com/JAN14" title="">January Challenge 2014</a></li>
+<li id="menu-4724" class="menu-path-www.codechef.com-KGP13ACM"><a href="http://www.codechef.com/KGP13ACM" title="">ACM-ICPC Kharagpur onsite regionals 2013 : Replay</a></li>
+</ul>
+</li>
+<li id="menu-138" class="menuparent menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">DISCUSS</a><ul><li id="menu-139" class="menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">Forums</a></li>
+<li id="menu-140" class="menu-path-blog.codechef.com-"><a href="http://blog.codechef.com/" title="">Blog</a></li>
+<li id="menu-920" class="menu-path-wiki-"><a href="/wiki/" title="">Wiki</a></li>
+<li id="menu-2202" class="menu-path-https--www.facebook.com-CodeChef"><a href="https://www.facebook.com/CodeChef" title="">Facebook</a></li>
+<li id="menu-141" class="menu-path-www.twitter.com-codechef"><a href="http://www.twitter.com/codechef" title="">Twitter</a></li>
+</ul>
+</li>
+<li id="menu-143" class="menuparent menu-path-node-124098"><a href="/community" title="">COMMUNITY</a><ul><li id="menu-733" class="menu-path-node-157517"><a href="/hostyourcontest" title="Hosting Contest on CodeChef">Host your Contest</a></li>
+<li id="menu-2310" class="menu-path-www.codechef.com-goforgold"><a href="http://www.codechef.com/goforgold" title="">Go for Gold</a></li>
+<li id="menu-3830" class="menu-path-www.codechef.com-campus_chapter-about"><a href="http://www.codechef.com/campus_chapter/about" title="">Campus Chapter</a></li>
+</ul>
+</li>
+<li id="menu-147" class="menuparent menu-path-node-3"><a href="/help" title="">HELP</a><ul><li id="menu-643" class="menu-path-www.codechef.com-wiki-faq"><a href="http://www.codechef.com/wiki/faq" title="">Frequently Asked Questions</a></li>
+<li id="menu-710" class="menu-path-www.codechef.com-wiki-faq-problem-setters"><a href="http://www.codechef.com/wiki/faq-problem-setters" title="">FAQ for problem setters</a></li>
+<li id="menu-1389" class="menu-path-node-313543"><a href="/problemsetting" title="Codechef Problem Creation">Problem Setting</a></li>
+<li id="menu-850" class="menu-path-www.codechef.com-wiki-tutorials"><a href="http://www.codechef.com/wiki/tutorials" title="">Tutorials</a></li>
+<li id="menu-2200" class="menu-path-www.codechef.com-long-ranklist-AX"><a href="http://www.codechef.com/long/ranklist/AX" title="Long contest rankings list">Long Contest Ranks</a></li>
+<li id="menu-2199" class="menu-path-www.codechef.com-short-ranklist-AX"><a href="http://www.codechef.com/short/ranklist/AX" title="Short contest rankings list">Short Contest Ranks</a></li>
+<li id="menu-1820" class="menu-path-node-503865"><a href="/event-calendar" title="Event Calendar">Event Calendar</a></li>
+<li id="menu-2372" class="menu-path-discuss.ww2.codechef.com-top-users-"><a href="http://discuss.ww2.codechef.com/top/users/" title="">Top Contributors on Discuss</a></li>
+</ul>
+</li>
+<li id="menu-150" class="menuparent menu-path-node-1"><a href="/aboutus" title="">ABOUT</a><ul><li id="menu-151" class="menu-path-node-1"><a href="/aboutus" title="">About CodeChef</a></li>
+<li id="menu-849" class="menu-path-node-178314"><a href="/team" title="Team CodeChef">Team CodeChef</a></li>
+<li id="menu-708" class="menu-path-node-157468"><a href="/press" title="Press Room">Press Room</a></li>
+<li id="menu-1312" class="menu-path-www.codechef.com-financials-"><a href="http://www.codechef.com/financials/" title="">CodeChef Financials</a></li>
+<li id="menu-1313" class="menu-path-www.codechef.com-sponsorships"><a href="http://www.codechef.com/sponsorships" title="">CodeChef Sponsorships</a></li>
+<li id="menu-709" class="menu-path-node-157470"><a href="/ceoscorner" title="CEO&#039;s Corner">CEO&#039;s Corner</a></li>
+<li id="menu-1858" class="menu-path-node-614485"><a href="/contactus" title="">Contact Us</a></li>
+<li id="menu-152" class="menu-path-www.directi.com-"><a href="http://www.directi.com/" title="">About Directi</a></li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /HEADER -->
+            <center>
+                <table cellspacing="0" cellpadding="10" id="maintable" class="maintable">
+                    <tr>
+                        <td class="content" width="99%">
+                            <div class="wrapper" id="content-regions">
+                                <div class="inner-wrapper rounded-cr-body">
+                                    <div class="rounded-cr-header">
+                                        <div class="rounded-cr-footer">
+                                            <div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a>&nbsp;&raquo;&nbsp;<a href="/problems/easy/">Practice(easy)</a>&nbsp;&raquo;&nbsp;The Guessing Game</div></div>
+                                            <div id="primary-colum-pad">
+                                                <div id="primary-colum-wrapper">
+                                                    <img class="content-wrapper-header" src="/sites/all/themes/abessive/images/content-wrapper-top-big.gif"/>
+                                                    <div id="problem-page">
+                                                        <div class="prob">
+                                                            <div class="primary-col-wrapper">
+                                                                                                                                                                                                                                                                                                                                <table class="pagetitle-prob" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                    <tr>
+                                                                        <td width="55%">
+                                                                            <h1>The Guessing Game</h1>
+                                                                            <p>Problem code: A3</p>
+																			                                                                            <fb:like send="true" width="450" show_faces="false" action="recommend" font="verdana"></fb:like>
+                                                                        </td>
+                                                                        <td>
+                                                                            <ul class="button-list">
+                                                                                <li style="display:<?php print $node->answerDisplay; ?>"><a href ="/submit/A3">Submit</a></li>                                                                                <li><a href="/status/A3,gauravgulzar">My Submissions</a></li>                                                                                <li><a href="/status/A3">All Submissions</a></li>
+                                                                            </ul>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <div class="primary-colum-width-left">
+                                                                    <div id="node-4448074" class="node clear-block">
+        
+    <div class="meta">
+        
+            </div>
+
+    <div class="content">
+<h3>All submissions for this problem are available.</h3><p>Alice and Johnny are playing a simple guessing game. Johnny picks an arbitrary positive integer <i>n</i> (1&lt;=<i>n</i>&lt;=10<sup>9</sup>) and gives Alice exactly <i>k</i> hints about the value of <i>n</i>. It is Alice's task to guess <i>n</i>, based on the received hints. 
+</p><p>
+Alice often has a serious problem guessing the value of <i>n</i>, and she's beginning to suspect that Johnny occasionally cheats, that is, gives her incorrect hints. 
+After the last game, they had the following little conversation:
+<div align="justify">
+<ul>
+<li>[Alice] Johnny, you keep cheating!
+</li><li>[Johnny] Indeed? You cannot prove it.
+</li><li>[Alice] Oh yes I can. In fact, I can tell you with the utmost certainty that in the last game you lied to me at least *** times.
+</li></ul>
+</div>
+</p><p>
+So, how many times at least did Johnny lie to Alice? Try to determine this, knowing only the hints Johnny gave to Alice.
+
+<h3>Input</h3>
+
+</p><p>The first line of input contains <i>t</i>, the number of test cases (about 20). Exactly <i>t</i> test cases follow. 
+
+</p><p>Each test case starts with a line containing a single integer <i>k</i>, denoting the number of hints given by Johnny (1&lt;=<i>k</i>&lt;=100000). Each of the next <i>k</i> lines contains exactly one hint. The <i>i</i>-th hint is of the form:</p>
+<p>
+ operator <i>l<sub>i</sub></i> logical_value
+</p>
+<p>where operator denotes one of the symbols &lt; , &gt; , or =; <i>l<sub>i</sub></i> is an integer (1&lt;=<i>l<sub>i</sub></i>&lt;=10<sup>9</sup>), while logical_value is one of the words: Yes or No. The hint is considered correct if logical_value is the correct reply to the question: "Does the relation: <i>n</i> operator <i>l<sub>i</sub></i> hold?", and is considered to be false (a lie) otherwise.
+
+<h3>Output</h3>
+</p><p>For each test case output a line containing a single integer, equal to the minimal possible number of Johnny's lies during the game.
+
+<h3>Example</h3>
+
+<pre>
+<b>Input:</b>
+3
+2
+&lt; 100 No
+&gt; 100 No
+3
+&lt; 2 Yes
+&gt; 4 Yes
+= 3 No
+6
+&lt; 2 Yes
+&gt; 1 Yes
+= 1 Yes
+= 1 Yes
+&gt; 1 Yes
+= 1 Yes
+
+<b>Output:</b>
+0
+1
+2
+</pre>
+
+</p><p><b>Explanation:</b> for the respective test cases, the number picked by Johnny could have been e.g. <i>n</i>=100, <i>n</i>=5, and <i>n</i>=1.</p>    </div>
+    <hr />
+    <table cellspacing="0" cellpadding="0" align="left">
+        <tr>
+            <td width="14%">Author:</td>
+            <td><a href="/users/admin">admin</a></td>
+		</tr>
+				                <tr>
+            <td width="14%">Tags</td>
+            <td><a class='problem-tag-small ' href='/tags/problems/admin'>
+                    admin
+                </a></td>
+        </tr>
+        		<tr>
+            <td width="14%">Date Added:</td>
+            <td>1-12-2008</td>
+        </tr>
+        <tr>
+            <td width="14%">Time Limit:</td>
+            <td>6 sec</td>
+        </tr>
+        <tr>
+            <td width="14%">Source Limit:</td>
+            <td>50000 Bytes</td>
+        </tr>
+        <tr>
+            <td width="14%">Languages:</td>
+            <td>ADA, ASM, BASH, BF, C, C99 strict, CAML, CLOJ, CLPS, CPP 4.3.2, CPP 4.8.1, CPP11, CS2, D, ERL, FORT, FS, GO, HASK, ICK, ICON, JAR, JAVA, JS, LISP clisp, LISP sbcl, LUA, NEM, NICE, NODEJS, PAS fpc, PAS gpc, PERL, PHP, PIKE, PRLG, PYTH, PYTH 3.1.2, RUBY, SCALA, SCM guile, SCM qobi, ST, TCL, TEXT, WSPC</td>
+        </tr>
+    </table>
+    <p style="clear:left;"><br /></p>
+    <ul class="button-list button-list-left">
+        <li style="display:block"><a href ="/submit/A3">Submit</a></li>
+    </ul>
+    <hr />
+    <h2 style="text-decoration: none;">Comments</h2>
+</div>
+<div id="comments">
+  <a id="comment-71005"></a>
+<div id="c71005" class="comment clear-block">
+  
+
+  <h3><a href="/problems/A3#comment-71005" class="active">I have tested the program</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/samrao89">samrao89</a></strong><span style="color:#828282"> @ 13 Jan 2014 06:29 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">I have tested the program with various test cases. But still get a wrong answer.
+I use java for Easy A3 problem.I doubt the way i handle exceptions.
+Can anyone please let me know how exceptions is to be declared or error conditions (format - like specific output in a error situation.)
+I'm new to this System Please advice.</div>
+      
+    <div class="comment-moderation-links"></div>
+  </div>
+  
+</div>
+<a id="comment-71008"></a>
+<div id="c71008" class="comment clear-block">
+  
+
+  <h3><a href="/problems/A3#comment-71008" class="active">If anyone has a java</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/samrao89">samrao89</a></strong><span style="color:#828282"> @ 13 Jan 2014 06:29 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">If anyone has a java sollution please share with me for this problem.</div>
+      
+    <div class="comment-moderation-links"></div>
+  </div>
+  
+</div>
+<a id="comment-71049"></a>
+<div id="c71049" class="comment clear-block">
+  
+
+  <h3><a href="/problems/A3#comment-71049" class="active">Thank you these type of</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/d3m0cl3s">d3m0cl3s</a></strong><span style="color:#828282"> @ 14 Jan 2014 09:33 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">Thank you these type of questions is what I was looking for on the internet for a long time</div>
+      
+    <div class="comment-moderation-links"></div>
+  </div>
+  
+</div>
+<a id="comment-71198"></a>
+<div id="c71198" class="comment clear-block">
+  
+
+  <h3><a href="/problems/A3#comment-71198" class="active">how to attempt this question</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/mani93">mani93</a></strong><span style="color:#828282"> @ 18 Jan 2014 07:58 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">how to attempt this question ?
+can any one help me out ?</div>
+      
+    <div class="comment-moderation-links"></div>
+  </div>
+  
+</div>
+<a id="comment-71222"></a>
+<div id="c71222" class="comment clear-block">
+  
+
+  <h3><a href="/problems/A3#comment-71222" class="active">I successfully solved it</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/aehkn">aehkn</a></strong><span style="color:#828282"> @ 19 Jan 2014 10:50 AM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">I successfully solved it anyone having doubt plz mail me <a href="mailto:ashishmhwl123@gmail.com">ashishmhwl123@gmail.com</a></div>
+      
+    <div class="comment-moderation-links"></div>
+  </div>
+  
+</div>
+<a id="comment-71489"></a>
+<div id="c71489" class="comment clear-block">
+  
+
+  <h3><a href="/problems/A3#comment-71489" class="active">O.o  i still doesn&#039;t</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/eva123">eva123</a></strong><span style="color:#828282"> @ 20 Jan 2014 04:33 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">O.o  i still doesn't understand ..what should i take out.? plz someone explain me in simple way plz. :(</div>
+      
+    <div class="comment-moderation-links"></div>
+  </div>
+  
+</div>
+<div class="box">
+  <h2 class="title"><hr></h2>  <div class="content"><span style="font-weight:bold;color:#777;">Need help? Post a comment. But before that please spare a moment to read the <a href="http://discuss.codechef.com/questions/855/what-kind-of-comment-should-i-post-on-the-problem-page" target="_blank">guidelines</a>.</span><form action="/comment/reply/4448074"  accept-charset="UTF-8" method="post" id="comment-form">
+<div><div class="form-item">
+ <label>Your name: </label>
+ gauravgulzar
+</div>
+<div class="form-item" id="edit-comment-wrapper">
+ <label for="edit-comment">Comment: <span class="form-required" title="This field is required.">*</span></label>
+ <textarea cols="60" rows="5" name="comment" id="edit-comment"  class="form-textarea resizable required"></textarea>
+</div>
+<input type="hidden" name="form_build_id" id="form-d96a3c540d52a1bc59da8149fd6a69aa" value="form-d96a3c540d52a1bc59da8149fd6a69aa"  />
+<input type="hidden" name="form_token" id="edit-form-token" value="bf3e056a12c3e5394818f1c53d4a5bd5"  />
+<input type="hidden" name="form_id" id="edit-comment-form" value="comment_form"  />
+<input type="submit" name="op" id="edit-submit" value="Save"  class="form-submit" />
+
+</div></form>
+</div>
+</div>
+</div>
+                                                                </div>
+                                                                <div class="primary-colum-width-right">
+                                                                    <div class="content-spacer-b">
+                                                                        <div id="block-problem_status-1" class="block block-problem_status">
+  <div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>
+  <div class="content">
+        <div class="center topbox-small-1" style="margin-left:0px;"><h3>SUCCESSFUL SUBMISSIONS<h3></div><br/>
+		<div id="rankContentDiv" class="table-results maintable">
+				<p align="center"><img src="/sites/all/themes/abessive/images/ajax-loader.gif" /> Fetching successful submissions</p>
+				<input type="hidden" id="pcode" value="A3" name=   "pcode" />
+				<input type="hidden" name="userid" id="userid" value="394602" />
+			<script type="text/javascript">
+				onload_getpage_ssubmissions("next");
+			</script>
+		</div>  </div>
+  <div class="r5"></div><div class="r4"></div><div class="r3"></div><div class="r2"></div><div class="r1 b"></div>
+</div>
+<div id="block-block-24" class="block block-block">
+  <div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>
+  <div class="content">
+        <div class="center topbox-small-1" style="text-align: center; margin:0;"><h3>HELP</h3></div>
+<pre style="clear : both;"></pre><br/>
+<table id="help" style='border: 1px solid #EEEDEC; width:333px;'> 
+<tr>
+<td style="border-bottom: 0px;">
+<p><br/>Program should read from <b>standard input</b> and write to <b>standard output</b>.  After you submit a solution you can see your results by clicking on the <b>[My Submissions]</b> tab on the problem page. Below are the possible results:</p>
+<p>&nbsp;</p>
+<ul>
+    <li ><b>Accepted</b><img alt="" src="/misc/tick-icon.gif" /> Your program ran successfully and gave a correct answer. If there is a score for the problem, this will be displayed in parenthesis next to the checkmark.</li><br/>
+    <li><b>Time Limit Exceeded</b><img alt="" src="/misc/clock_error.png" /> Your program was compiled successfully, but it didn't stop before time limit. Try optimizing your approach.</li><br/>
+    <li><b>Wrong Answer</b><img alt="" src="/misc/cross-icon.gif" /> Your program compiled and ran succesfully but the output did not match the expected output.</li><br/>
+    <li><b>Runtime Error</b><img alt="" src="/misc/runtime-error.png" /> Your code compiled and ran but encountered an error. The most common reasons are using too much memory or dividing by zero. For the specific error codes see the help section.</li><br/>
+    <li><b>Compilation Error</b><img alt="" src="/misc/alert-icon.gif" /> Your code was unable to compile. When you see this icon, click on it for more information.</li><br/>
+    If you are still having problems, see a <a href="/help/#sampleq">sample solution</a> here. </ul>
+</td>
+</tr>
+</table>
+  </div>
+  <div class="r5"></div><div class="r4"></div><div class="r3"></div><div class="r2"></div><div class="r1 b"></div>
+</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <img class="content-wrapper-header" src="/sites/all/themes/abessive/images/content-wrapper-bootm-big.gif"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                                    <div id="footer" class="wrapper">
+                        <!--<div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>-->
+                        <div class="content clear-block">
+                            <!-- Footer Contents -->
+                            <div id="block-block-13" class="block block-block block-header">
+  <div class="content">
+        <script language="javascript" type="text/javascript">
+function formatTime(ts) {
+  now = new Date(ts);
+ 
+  localtime = new Date();
+  hour = now.getHours();
+  min = now.getMinutes();
+  sec = now.getSeconds();
+  
+  if (min <= 9) {
+	 min = "0" + min;
+  }
+  if (sec <= 9) {
+	 sec = "0" + sec;
+  }
+  if (hour > 12) {
+	 hour = hour - 12;
+	 add = " PM";
+  } else {
+	 hour = hour;
+	 add = " AM";
+  }
+  if (hour == 12) {
+	 add = " PM";
+  }
+  if (hour == 00) {
+	 hour = "12";
+  }
+	
+  $('#server-time').html(((hour<=9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+  
+  nextSec = (now.getTime() + 1000);
+  
+  setTimeout("formatTime("+nextSec+")", 1000);
+}
+function getDtTimeZone() 
+{
+var rightNow = new Date();
+var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+var temp = toDay.toGMTString();
+var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") -1));
+var stdTime = (toDay - date2) / (1000 * 60 * 60);
+return stdTime;
+}
+/*var d=new Date();
+$.ajax({
+url: '/umtza',
+type:'POST',
+data: 'umtza='+d.toString(),
+});
+*/
+</script>
+<div id="disclaimer">CodeChef is a non-commercial competitive programming community</div>
+<div class="inner-wrapper">
+<div class="cols-2">
+<div id="secondary-nav">
+<ul>
+    <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+    <li><a target="_blank" href="http://www.directi.com/">About Directi</a></li>
+    <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+    <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+    <li><a href="http://www.codechef.com/Programming-Languages">Programming Languages</a></li>
+    <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+</ul>
+</div>
+<div id="copyright" class="cols-2">&copy; 2009 <a style="color: rgb(0, 0, 0);" href="http://www.directi.com">Directi Group</a>.  All Rights Reserved.  CodeChef uses SPOJ &copy; by <a style="color: rgb(0, 0, 0);" href="http://www.sphere-research.com">Sphere Research Labs</a></div>
+<div id="copyright-msg">In order to report copyright violations of any kind, send in an email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></div>
+</div>
+<div align="right" class="cols-2-right" style="float:right;">
+<div id="sponsor-strip"><a target="_blank" href="http://www.directi.com"><img alt="CodeChef a product of Directi" src="/sites/all/themes/abessive/images/footer-sponsor-strip.gif" /></a><br />
+<span>The time now is: <span id="server-time"></span></span>
+				<script language='javascript'>
+						formatTime('January 21, 2014 17:11:34');
+					</script></div>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-53602-42");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+
+<!-- Google Code for Visitors that do not sign-up Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066618556;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "gbUUCPTlhAIQvJ3N_AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1066618556/?label=gbUUCPTlhAIQvJ3N_AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for RM codechef Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 968176136;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "iDk7CPDZ7wMQiOTUzQM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/968176136/?label=iDk7CPDZ7wMQiOTUzQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<div class='cc-footer-seo'>
+<span><a href='/'>CodeChef</a> - A Platform for Aspiring Programmers</span>
+<p>CodeChef was created as a platform to help programmers make it big in the world of algorithms, <strong>computer programming</strong> and <strong>programming contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a <strong>programming contest</strong> at the start of the month and another smaller programming challenge in the middle of the month. We also aim to have training sessions and discussions related to <strong>algorithms, binary search</strong>, technicalities like <strong>array size</strong> and the likes. Apart from providing a platform for <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials and forum discussions to help those who are new to the world of <strong>computer programming</strong>.</p>
+<p></p>
+<span><a href='/problems/easy'>Practice Section</a> - A Place to hone your 'Computer Programming Skills'</span>
+<p>Try your hand at one of our many practice problems and submit your solution in a language of your choice. Our <strong>programming contest</strong> judge accepts solutions in over 35+ programming languages. Preparing for coding contests were never this much fun! Receive points, and move up through the CodeChef ranks. Use our practice section to better prepare yourself for the multiple <strong>programming challenges</strong> that take place through-out the month on CodeChef. </p>
+<p></p>
+<span><a href='/contests/'>Compete</a> - Monthly Programming Contests and Cook-offs</span>
+<p>Here is where you can show off your <strong>computer programming</strong> skills. Take part in our 10 day long monthly <strong>coding contest</strong> and the shorter format Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great prizes. Our <strong>programming contests</strong> have prizes worth up to Rs.20,000 and $700lots more CodeChef goodies up for grabs. </p>
+<p></p>
+<span><a href='http://discuss.codechef.com/'>Discuss</a></span>
+<p>Are you new to <strong>computer programming</strong>? Do you need help with algorithms? Then be a part of CodeChef's Forums and interact with all our programmers - they love helping out other programmers and sharing their ideas. Have discussions around <strong>binary search, array size, branch-and-bound, Dijkstra's algorithm, Encryption algorithm</strong> and more by visiting the CodeChef Forums and Wiki section.</p>
+<p></p>
+<span><a href='/community'>CodeChef Community</a></span>
+<p>As part of our Educational initiative, we give institutes the opportunity to associate with CodeChef in the form of Campus Chapters. Hosting <strong>online programming competitions</strong> is not the only feature on CodeChef. You can also host a <strong>coding contest</strong> for your institute on CodeChef, organize an <strong>algorithm</strong> event and be a guest author on our blog. </p>
+<p></p>
+<span><a href='/goforgold'>Go For Gold</a></span>
+<p>The Go for Gold Initiative was launched about a year after CodeChef was incepted, to help prepare Indian students for the <strong>ACM ICPC</strong> World Finals competition. In the run up to the <strong>ACM ICPC</strong> competition, the Go for Gold initiative uses CodeChef as a platform to train students for the <strong>ACM ICPC</strong> competition via multiple warm up contests. As an added incentive the Go for Gold initiative is also offering over Rs.8 lacs to the Indian team that beats the 29th position at the <strong>ACM ICPC</strong> world finals. Find out more about the Go for Gold and the <strong>ACM ICPC</strong> competition <a href="/goforgold">here</a>.</p>
+</div>  </div>
+</div>
+<div id="block-block-48" class="block block-block block-header">
+  <div class="content">
+        <script type ='text/javascript' src ='/misc/jquery.cookie.js'>  </script><script type ='text/javascript' src ='/misc/notification.js'>  </script>  </div>
+</div>
+                        </div>
+                    </div>
+                                      <div id="fb-root"></div>
+      <script type="text/javascript">
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId  : '191217060453',
+            status : true, // check login status
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml  : true,
+            logging: '0',
+            channelURL: 'http://www.codechef.com/sites/all/modules/fbconnect/channel.html',
+            oauth : true
+          });
+
+          jQuery(document).trigger('fb:init');
+        };
+
+        (function() {
+          var e = document.createElement('script');
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          e.async = true;
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      </script>
+<div style="display: none"><form action="/problems/A3?destination=node%2F4448074"  accept-charset="UTF-8" method="post" id="fbconnect-autoconnect-form">
+<div><input type="submit" name="op" id="edit-connect" value="Connect"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-2d36871e88fb52c761d017c0c6371db2" value="form-2d36871e88fb52c761d017c0c6371db2"  />
+<input type="hidden" name="form_token" id="edit-fbconnect-autoconnect-form-form-token" value="11e333b24f3048e99da66e7e5aa9c4c0"  />
+<input type="hidden" name="form_id" id="edit-fbconnect-autoconnect-form" value="fbconnect_autoconnect_form"  />
+
+</div></form>
+</div>            </center>
+    </body>
+</html>
